@@ -1,4 +1,5 @@
 import React from 'react'
+import { push } from 'react-router'
 import { Button, Form, Grid, Header, Image, Message, Segment, Icon } from 'semantic-ui-react'
 import { GoogleLogin } from 'react-google-login'
 
@@ -6,12 +7,8 @@ class LoginForm extends React.Component {
     
     responseGoogle = (response) => {
         console.log(response);
-        this.enter();
+        this.props.enter();
 
-    }
-
-    enter() {
-        this.props.history.push('/');
     }
 
     render = () => (
